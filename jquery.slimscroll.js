@@ -390,9 +390,9 @@
         {
           if (window.addEventListener)
           {
-            target.addEventListener('DOMMouseScroll', _onWheel, false );
-            target.addEventListener('mousewheel', _onWheel, false );
-            target.addEventListener('wheel', _onWheel, false);
+            target.addEventListener('DOMMouseScroll', _onWheel, { passive: true } );
+            target.addEventListener('mousewheel', _onWheel, { passive: true } );
+            target.addEventListener('wheel', _onWheel, { passive: true });
           }
           else
           {
